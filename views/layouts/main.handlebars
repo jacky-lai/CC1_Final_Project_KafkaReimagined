@@ -1,0 +1,65 @@
+{{!-- main.handlebars --}}
+
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/stylesheet.css">
+
+    <title>Kafka: Reimagined</title>
+
+    <style>
+        li,
+        #index {
+            display: none
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var fader = document.getElementById('fader');
+            fader.classList.add('fade-out');
+            $("#item1").delay("800").fadeIn('slow');
+            $("#item2").delay("800").fadeIn('slow');
+            $("#item3").delay("800").fadeIn('slow');
+            $("#index").delay("1400").fadeIn('slow');
+
+
+            /* Every time the window is scrolled ... */
+            $(window).scroll(function () {
+                /* Check the location of each desired element */
+                $('.hideme').each(function (i) {
+
+                    var top_of_object = $(this).offset().top - 100;
+                    var top_of_window = $(window).scrollTop();
+
+                    /* If the object is completely visible in the window, fade it it */
+                    if (top_of_window > top_of_object) {
+
+                        $(this).animate({ 'opacity': '1' }, 500);
+                    }
+                });
+            });
+            $('.menu').on('click', '.navBttn', function (e) {
+                $("#kafka").fadeIn('slow');
+            });
+        })
+    </script>
+</head>
+
+<body>
+    <svg id="fader"></svg>
+
+
+
+    <div class="container">
+        {{{body}}}
+    </div>
+    <footer>
+        <p>© 2020 Jacky Lai</p>
+    </footer>
+</body>
+
+
+</html>

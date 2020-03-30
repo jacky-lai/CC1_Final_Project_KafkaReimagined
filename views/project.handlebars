@@ -1,0 +1,128 @@
+<style>
+    body {
+        background-color: black;
+        overflow: hidden;
+    }
+
+    #blackScreen {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: black;
+    }
+
+    #lds-dual-ring, .instructions, .intro, #introText {
+        display: none;
+    }
+    #lds-dual-ring {
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        top: 48%;
+        left: 48%;
+    }
+
+    #lds-dual-ring:after {
+        content: " ";
+        display: block;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border-radius: 50%;
+        border: 6px solid #fff;
+        border-color: #fff transparent #fff transparent;
+        animation: lds-dual-ring 1.2s linear infinite;
+    }
+
+    @keyframes lds-dual-ring {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#lds-dual-ring").delay("1300").fadeIn('slow');
+        $("#introText").delay("1700").fadeIn('slow');
+        $('#introText').delay("8500").fadeOut('slow');
+        $('.instructions').delay("12500").fadeIn('slow');
+        $('.instructions').delay("6500").fadeOut('slow');
+        $('#lds-dual-ring').delay("8500").fadeOut('slow');
+        $('.intro').delay("22000").fadeIn('slow');
+        $('.intro').delay("3000").fadeOut('slow');
+        $('#blackScreen').delay("28000").fadeOut('slow');
+    })
+</script>
+
+<audio autoplay onloadeddata="var audioPlayer = this; setTimeout(function() { audioPlayer.pause(); }, 27000)">
+        <source src="underwaterSound.wav" type="audio/wav">
+</audio>
+
+
+<body id="project">
+    <header>
+        <hr>
+        <h3><a style="text-decoration:none" id="title" href="/">Kafka:Reimagined</a></h3>
+        <nav>
+            <ul class="menu">
+                <li id="item1" class="navBttn"><a href="/#kafka">Franz Kafka</a></li>
+                <li id="item2" class="navBttn"><a href="/#description">Das Projekt</a></li>
+                <li id="item3" class="navBttn"><a href="/project">Anwendung</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="blackScreen"></div>
+
+    {{!-- <div id="lds-dual-ring"></div> --}}
+    <div style="position: absolute; left: 50%; top:47%;">
+        <div style="position: relative; left: -45%; top:-50%;"id="introText">
+        <p>Im Folgenden siehst du einen <b>Auschnitt</b>
+            <br>aus der VR-Experience<i>Kafka:Reimagined</i> 
+            <br>in einer web-basierten Version</p>
+        </div>
+    </div>
+
+    <div style="position: absolute; left: 50%; top:45%;">
+        <div style="position: relative; left: -45%; top:-50%;"class="instructions">
+        <p>Nutze die Maus um dich umzuschauen</p>
+        <br>
+        <p>Bewege dich fort mit Taste 'W'</p>
+        <br>
+        <p>Interaktion mit Taste "E"</p>
+        </div>
+    </div>
+
+    <div style="position: absolute; left: 50%; top:50%;">
+        <div style="position: relative; left: -45%; top:-50%;"class="intro">
+        <p>AKT I – Exposition</p>
+        </div>
+    </div>
+
+    <iframe id="webGLapp" src="https://jacky-lai.github.io/WebGL_KafkaReimagined/"></iframe>
+
+        <style>
+            footer {
+            position: absolute;
+            height: 10%;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            display: block;
+            background: rgb(0, 0, 0);
+            background: linear-gradient(360deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.9738270308123249) 45%, rgba(0,0,0,0.6124824929971988) 78%, rgba(255,255,255,0) 100%);
+            
+            font-family: 'Rasa', serif;
+            }
+            footer p {
+            margin: 2%;
+            }
+        </style>
+</body>

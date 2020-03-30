@@ -1,0 +1,217 @@
+/*----------- GENERAL ----------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Homemade+Apple|Rasa&display=swap');
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 1.1px;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-family: 'Homemade Apple', cursive;
+  color: white;
+  background-color: black;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/*----------- FADER STYLE FOR LOADING NEW PAGE ----------------*/
+#fader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  pointer-events: none;
+  background: black;
+  animation-duration: 300ms;
+  animation-timing-function: ease-in-out;
+}
+@keyframes fade-out {
+  from { opacity: 1 }
+    to { opacity: 0 }
+}
+@keyframes fade-in {
+  from { opacity: 0 }
+    to { opacity: 1 }
+}
+#fader.fade-out {
+  opacity: 0;
+  animation-name: fade-out;
+}
+#fader.fade-in {
+  opacity: 1;
+  animation-name: fade-in;
+}
+
+/*----------- HEADER  ----------------*/
+header {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.861782212885154) 0%, rgba(255, 255, 255, 0) 100%);
+  position: fixed;
+  width: 100%;
+  height: 18%;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+header hr {
+  background: transparent;
+}
+
+#title {
+  font-size: 2.3em;
+  letter-spacing: 0.1em;
+  color: white;
+  display: inline;
+  font-family: 'Rasa', serif;
+}
+
+/*----------- NAVIGATION ----------------*/
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* max-width: 920px; */
+  margin: 0 auto;
+  /* height: 10vh; */
+  list-style: none;
+}
+.menu li {
+  width: 300px;
+  height: 50px;
+  margin: 20px;
+  transition: background-position-x 0.9s linear;
+  text-align: center;
+}
+.menu a {
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.45s;
+}
+.menu a:hover, #title:hover {
+  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEi%0D%0AIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhs%0D%0AaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0%0D%0AaD0iMzkwcHgiIGhlaWdodD0iNTBweCIgdmlld0JveD0iMCAwIDM5MCA1MCIgZW5hYmxlLWJhY2tn%0D%0Acm91bmQ9Im5ldyAwIDAgMzkwIDUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0i%0D%0Abm9uZSIgc3Ryb2tlPSIjZDk0ZjVjIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGlt%0D%0AaXQ9IjEwIiBkPSJNMCw0Ny41ODVjMCwwLDk3LjUsMCwxMzAsMAoJYzEzLjc1LDAsMjguNzQtMzgu%0D%0ANzc4LDQ2LjE2OC0xOS40MTZDMTkyLjY2OSw0Ni41LDI0My42MDMsNDcuNTg1LDI2MCw0Ny41ODVj%0D%0AMzEuODIxLDAsMTMwLDAsMTMwLDAiLz4KPC9zdmc+Cg==");
+  animation: line 1s;
+  color: #d94f5c;
+}
+.menu:not(:last-child) {
+  margin-right: 30px;
+}
+@keyframes line {
+  0% {
+    background-position-x: 590px;
+  }
+}
+
+/*----------- CONTENT ----------------*/
+.hideme {
+  opacity: 0;
+}
+.content h1 {
+  text-align: center;
+  margin-bottom: 2%;
+}
+hr {
+  width: 50px;
+  height: 2px;
+  background: white;
+  border: 0;
+  margin: 0 auto 40px auto;
+}
+.content {
+  position: relative;
+  /* margin-top: 15%; */
+  margin-left: 25%;
+  margin-right: 25%;
+  height: 100%;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+section {
+  min-height: 100%;
+  font-family: 'Rasa', serif;
+  font-size: 1.1em;
+  text-align: justify;
+}
+
+#kafka, #description {
+  padding-top: 25%;
+}
+#kafka h2{
+  text-align: center;
+  font-size: larger;
+}
+
+#portrait{
+  width: 35%;
+  position: relative;
+  left: 33%;
+}
+#quote{
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+}
+#treeDiv p{
+  text-align: center;
+  font-size: 0.8em;
+  font-style: bold;
+  margin-top: 2%;
+  margin-bottom: 5%;
+
+}
+#tree{
+  width: 80%;
+  position: relative;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 5%;
+}
+
+#index {
+  padding-top: 35%;
+  padding-bottom: 25%;
+}
+
+
+/*----------- PROJECT PAGE ----------------*/
+.instructions, .intro, #introText{
+  font-family: 'Rasa', serif;
+  /* position: absolute;
+  padding-top: 20%; */
+  /* text-align: center; */
+}
+
+iframe {
+  width: 80%;
+  height: 800px;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 7%;
+  border: none;
+}
+
+

@@ -1,0 +1,162 @@
+{{!-- index.handlebars --}}
+
+{{!-- <style>
+    #main {
+        display: none
+    }
+</style> --}}
+
+{{!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> --}}
+
+{{!-- <script>
+    $(document).ready(function () {
+        $("#main").delay("2000").fadeIn('slow');
+    })
+</script> --}}
+
+{{!-- <section id="main" class="main-wrap"> --}}
+{{!-- HEADER ----------------------------------------------------------}}
+<header>
+    <hr>
+    <h3><a style="text-decoration:none" id="title" href="#index">Kafka:Reimagined</a></h3>
+    <nav>
+        <ul class="menu">
+            <li id="item1" class="navBttn"><a href="#kafka">Franz Kafka</a></li>
+            <li id="item2" class="navBttn"><a href="#description">Das Projekt</a></li>
+            <li id="item3" class="navBttn"><a href="/project">Anwendung</a></li>
+        </ul>
+    </nav>
+</header>
+
+{{!-- VIDEO & AUDIO ----------------------------------------------------------}}
+<video autoplay muted playsinline loop id="myVideo">
+    <source src="underwaterScene_CC_FinalProject.mp4" type="video/mp4">
+</video>
+
+<audio autoplay loop>
+    <source src="underwaterSound.wav" type="audio/wav">
+</audio>≥
+
+{{!-- CONTENT ----------------------------------------------------------}}
+<div class="content">
+
+    {{!--  INDEX ----------------------------------------------------------}}
+    <section id="index">
+
+        <h1>"Das Urteil" von Franz Kafka <br> eine Interpretation im virtuellen Raum</h1>
+        <hr>
+        <p class="main-text" style="text-align: center;">Ein Sonntagvormittag im schönsten Frühjahr, eine alte
+            Brieffreundschaft, eine Brücke, der Vater als Richter über das Leben des Sohnes, ein Fluss und der Freitod
+            als Ausweg aus der Existenz eines Unverstandenen: <br><br>“Das Urteil” spannt eine kafkaeske Hyperbel, an
+            dessen Ende nur Fassungslosigkeit zurückbleibt. Doch was passiert, wenn Strukturen durchbrochen werden,
+            Vorgestelltes Wirklichkeit wird und das Ende
+            zum Anfang und der Anfang zum Ende wird?</p>
+    </section>
+
+    {{!-- KAFKA ----------------------------------------------------------}}
+
+    <section id="kafka" class="hideme">
+        <div id="portraitDiv">
+            <img id="portrait" src="kafka.svg" />
+        </div>
+        <h1>Franz Kafkas Werk & Leben</h1>
+        <hr>
+
+        <p class="main-text">
+            <p id="quote"><i>"Er schrieb die bedeutendsten Bücher der jungen deutschen Literatur. Sie sind wahr, nackt
+                    und schmerzhaft,
+                    voll trockenen Hohns und sensibler Sicht eines Menschen, der die Welt so klar erblickt hat, dass er
+                    es nicht
+                    ertragen konnte und sterben musste."</i> <br><br> – Milena Jesenská über Kafka
+            </p>
+            <br>
+            <br>
+            Franz Kafka (1883 – 1924) war einer der wichtigsten deutschsprachigen Erzähler des 20.
+            Jahrhunderts. Sein Leben verbrachte er überwiegend
+            in seiner Geburtsstadt Prag. Kafka ist berühmt für seine grotesken und absurden Erzählungen und Romane.
+            Viele davon erschienen postum: Herausgeber war Max Brod (1884 – 1968),
+            sein enger Freund und Nachlassverwalter.
+            <br>
+            <br> Kafkas Werk lässt sich aufteilen in die Arbeiten, die von ihm zu Lebzeiten autorisiert wurden, und
+            solchen, die postum von Max Brod veröffentlicht wurden. Kafka hatte eigentlich verfügt, sämtliche
+            unveröffentlichten Manuskripte nach seinem Tode zu vernichten. Doch sein Freund Max Brod, von Kafkas
+            Vater zum Nachlassverwalter bestellt, begann, Kafkas Werk der Öffentlichkeit zugänglich zu machen. <a
+                href="https://www.inhaltsangabe.de/kafka">[Quelle]</a>
+            <br>
+            <br>
+            <br>
+            <h2>Über "Das Urteil"</h2>
+            <br> Franz Kafka schrieb seine Erzählung »Das Urteil« im Jahre 1912, also in jenem Jahr, als der
+            Engländer Scott den Südpol erreichte und Gerhart Hauptmann den Nobelpreis für Literatur erhielt. Ein
+            Jahr später wurde »Das Urteil« erstmals veröffentlicht. Es handelt sich um ein Gegenwartsstück, der
+            zeitliche Rahmen ist also das frühe 20. Jahrhundert. Hauptperson der Erzählung mit dem Untertitel »Eine
+            Geschichte für Felice B.« ist Georg Bendemann, ein erfolgreicher, aber etwas unsicherer Kaufmannssohn.
+            Ferner in die Handlung eingebunden ist Georgs Vater, der wegen seiner schlechten Gesundheit ans Bett
+            gefesselt ist. Körperliche Gebrechen sowie der kürzliche Tod der Ehefrau machen Georgs Vater schwer zu
+            schaffen und er zieht sich immer mehr zurück. Außerdem wird in dem Stück noch ein Brieffreund Georgs
+            erwähnt, der aber in Russland lebt und namentlich auch nicht genannt wird. <a
+                href="https://www.inhaltsangabe.de/kafka/das-urteil/">[Quelle]</a>
+        </p>
+
+    </section>
+
+    {{!-- PROJECT ----------------------------------------------------------}}
+    <section id="description" class="hideme">
+
+        <h1>Virtuelle Realitäten und non-lineares Storytelling: <br> der Versuch einer Neuinterpretation</h1>
+        <hr>
+        <p class="main-text">Im Rahmen meines Orientierungsprojektes im ersten Semester des Studiengangs Creative
+            Technologies, entwickle ich eine Virtual-Reality-Experience, in der die Handlung der Erzählung “Das
+            Urteil” (1913) des Schriftsteller Franz Kafka visualisiert wird.
+            <br>
+            <br>Die BetrachterInnen finden sich in einer Interpretation der in der Handlung beschriebenen
+            Schauplätze wieder und können sich innerhalb dieser, begleitet von einer gesprochenen Narration aus
+            der Erzählperspektive des Protagonisten Georg Bendemann, fortbewegen und die Kulissen im virtuellen
+            Raum erkunden.
+            <br>
+
+            <br>Es soll eine immersive Erfahrung geschaffen werden, in der Aspekte des non-linear Storytellings
+            integriert werden. Die Handlung der Erzählung wird in drei schlüssige, eigenständige Szenen
+            unterteilt, die einer klassischen 3-Akte-Struktur folgt. Diese Szenen können von den BetrachterInnen in
+            einer unbestimmten, zufälligen Reihenfolge verfolgt werden. Die VR-Experience kann beispielsweise mit
+            dem dritten Akt beginnen, in dem der zuvor beschriebene, aber den BetrachterInnen – noch unbekannte –
+            Konflikt aufgelöst wird, mit dem ersten Akt – der Exposition, also Darlegung der Vorgeschichte –
+            weiterführen und der Konfrontation im zweiten Akt enden. Die möglichen Konstellationen eines solchen
+            non-linearen Erzählschemas lassen sich aus der nachfolgenden Grafik entnehmen.
+            <br>
+
+            <div id="treeDiv">
+                <img id="tree" src="decisionTree.png" />
+                <p>Bild: Vergleich der 3-Akte-Struktur im linearen sowie nicht-linearen Erzählschema</p>
+            </div>
+
+            <br>Den BetrachterInnen wird somit die Change ermöglicht, einen völlig eigene und einzigartige Version
+            der Erzählung zu erleben und die Handlung aus verschiedenen Perspektiven zu betrachten und dadurch
+            bestimmte Gedanken, Emotionen oder Aspekte zu entdecken, die den Lesenden in einer linearen Struktur so
+            womöglich nicht eröffnet worden wären.
+
+        </p>
+
+    </section>
+</div>
+
+<style>
+    footer {
+        position: relative;
+        height: 6%;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        display: block;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9738270308123249) 45%, rgba(0, 0, 0, 0.6124824929971988) 78%, rgba(255, 255, 255, 0) 100%);
+        font-family: 'Rasa', serif;
+        margin-top: 10%;
+    }
+
+    footer p {
+        margin: 2%;
+    }
+</style>
+{{!-- </section> --}}
